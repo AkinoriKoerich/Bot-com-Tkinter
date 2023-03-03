@@ -92,11 +92,8 @@ pyautogui.press("Enter")
 time.sleep(5)
 
 # Localizar o contato escolhido
-pyautogui.press('Tab')
-pyautogui.press('Tab')
-pyautogui.press('Tab')
-pyautogui.press('Tab')
-pyautogui.press('Tab')
+for tab in range(5):
+    pyautogui.press('Tab')
 pyautogui.write(cont2)
 time.sleep(1.3)
 pyautogui.press('enter')
@@ -109,3 +106,4 @@ for num in range(formatado):
     pyperclip.copy(msg2)
     pyautogui.hotkey('ctrl', 'v')
     pyautogui.press('enter')
+    pyautogui.hotkey('ctrl', 'w')
